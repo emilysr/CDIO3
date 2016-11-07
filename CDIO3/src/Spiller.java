@@ -34,38 +34,3 @@ public class Spiller {
 
 
 
-
-//public class Spiller {
-//
-//    private static int antalSpillere=0; //klasse-attribut, som holder styr pÂ antal objekter der er oprettet
-//
-//    private Konto kto;   /* klassen Konto forudsættes importeret */
-//
-//    private int ID_nr;
-//
-//   
-//
-//    public Spiller() {
-//    	
-//    			//konstrukt¯rern skal optælle - klassevariablen (-attributten)
-//                antalSpillere++; 
-//                
-//                // her tildeles spilleren et nummer - som klassearttrib. er nÂet til
-//                ID_nr = antalSpillere;  
-//                kto = new Konto();
-//    }
-//    
-//    public int getAntalSp () {
-//    	
-//                return antalSpillere;
-//    }
-//
-//    public int getPengebeholdning () {
-//    	
-//                return kto.getScore();
-//    }
-//
-//    public int getSpillersNr() {
-//
-//                return ID_nr;
-//    }

@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Felter {
 	private static String feltnavn;
-	private static String felttekst;
+	
 	
 	/* Henter det nuværende felt navn */
 	public static String hentFeltNavn () {
@@ -18,28 +18,28 @@ public class Felter {
 		 * Felt [0] & [1] er tomme da vi kun kan slå værdierne 2-12
 		 */
 		ArrayList <String> feltNavn = new ArrayList <String> ();
-			feltNavn.add("");
-			feltNavn.add("");
-			feltNavn.add("");
-			feltNavn.add("");
-			feltNavn.add("");
-			feltNavn.add("");
-			feltNavn.add("");
-			feltNavn.add("");
-			feltNavn.add("");
-			feltNavn.add("");
-			feltNavn.add("");
-			feltNavn.add("");
-			feltNavn.add("");
-			feltNavn.add("");
-			feltNavn.add("");
-			feltNavn.add("");
-			feltNavn.add("");
-			feltNavn.add("");
-			feltNavn.add("");
-			feltNavn.add("");
-			feltNavn.add("");
-			feltNavn.add("");
+			feltNavn.add("START");
+			feltNavn.add("Tribe Encampment");
+			feltNavn.add("Crater");
+			feltNavn.add("Mountain");
+			feltNavn.add("Cold Desert");
+			feltNavn.add("Black cave");
+			feltNavn.add("The Werewall");
+			feltNavn.add("Mountain village");
+			feltNavn.add("South Citadel");
+			feltNavn.add("Palace gates");
+			feltNavn.add("Tower");
+			feltNavn.add("Castle");
+			feltNavn.add("Walled city");
+			feltNavn.add("Monastery");
+			feltNavn.add("Huts in the mountain");
+			feltNavn.add("The pit");
+			feltNavn.add("Goldmine");
+			feltNavn.add("Caravan");
+			feltNavn.add("Second Sail");
+			feltNavn.add("Sea Grover");
+			feltNavn.add("The Buccaneers");
+			feltNavn.add("Privateer armade");
 			
 			String navn = feltNavn.get(sum);
 			
@@ -80,22 +80,32 @@ public class Felter {
 		ArrayList <String> feltTekst = new ArrayList <String> ();
 			feltTekst.add("");
 			feltTekst.add("");
-			feltTekst.add("Du har overtaget tÂrnet og til dit store held finder du en skattekiste med 250 penge!");
-			feltTekst.add("ÿv, du landede lige midt i et krater, din pung ryger ud af lommen og du mister 100 penge.");
-			feltTekst.add("Du er endelig nÂet frem til paladsets porte, som tak for dit heltmod, giver kongen dig 100 penge.");
-			feltTekst.add("Du er strandet midt i den kolde ¯rken. Du k¯ber et tæppe af en beduiner for 20 penge.");
-			feltTekst.add("Et forunderligt syn m¯der dig pÂ din vej. Midt i mellem bjergene finder du en smuk by, de er alle meget rige og du modtager 180 penge");
-			feltTekst.add("Du ankommer til et kloster. Det ser ikke ud som om der har været nogle her i mange Âr? Der er heller ingen penge at finde.");
-			feltTekst.add("Din fakkel er gÂet ud og du stÂr nu i komplet m¯rke. Noget r¯rer ved dit ben. Du kan h¯re en hvislelys i det fjerne. Da du endelig finder ud igen har du mistet 70 penge");
-			feltTekst.add("Oppe i bjergene st¯der du pÂ et par træhytter. Du gÂr ind og fÂr varmen og tilfældigvis ligger der 60 penge");
-			feltTekst.add("Du kommer til den skræmmende vareulve mur, du bliver bidt og mÂ bruge 80 penge pÂ en modeliksir, men du fÂr en ekstra tur. Skynd dig væk!");
-			feltTekst.add("Du er blevet udfordret til en kamp i pitten, desværre taber du og mister 50 penge");
-			feltTekst.add("Du finder en grotte og gÂr der ind. Der er noget der skinner... Du opdager det er en mine fyldt med guld! Du tager sÂ meget som du kan bære pÂ. Du fÂr 650 penge! ");
+			feltTekst.add("");
+			feltTekst.add("");
+			feltTekst.add("");
+			feltTekst.add("");
+			feltTekst.add("");
+			feltTekst.add("");
+			feltTekst.add("");
+			feltTekst.add("");
+			feltTekst.add("");
+			feltTekst.add("");
+			feltTekst.add("");
+			feltTekst.add("");
+			feltTekst.add("");
+			feltTekst.add("");
+			feltTekst.add("");
+			feltTekst.add("");
+			feltTekst.add("");
+			feltTekst.add("");
+			feltTekst.add("");
+			feltTekst.add("");
+			feltTekst.add("");
 				
-			String navn = feltTekst.get(sum);
+			String tekst = feltTekst.get(sum);
 			
 				
-			return navn;
+			return tekst;
 		}
 			
 		/*
