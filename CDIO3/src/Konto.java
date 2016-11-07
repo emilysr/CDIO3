@@ -10,7 +10,7 @@ public class Konto {
 	
 	/*
 	 *En metode der tilf¯jer et nyt element i arrayet Pengebeholdning 
-	 * og sÊtter penge beholdningen til 1000 som default
+	 * og sætter penge beholdningen til 1000 som default
 	 */
 	public static void nyKonto(){
 	Pengebeholdning.add(1000);
@@ -24,7 +24,7 @@ public class Konto {
 	}
 	
 	/*
-	 * En metode til at Êndre pengebeholdningen i en bestemt  konto
+	 * En metode til at ændre pengebeholdningen i en bestemt  konto
 	 */
 	public static void setPengebeholdning(int pengefund, int j)
 	{
@@ -37,7 +37,7 @@ public class Konto {
 		
 		/* returnere en boolean pÂ om der er en vinder */
 		if(nykonto >=3000){
-			Main.konto3000=true; //SKAL DETTE IKKE ∆NDRES TIL MAIN ???
+			Main.konto3000=true; //
 		}
 		Pengebeholdning.set(j,nykonto);
 	}

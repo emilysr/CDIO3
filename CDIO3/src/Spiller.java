@@ -39,7 +39,7 @@ public class Spiller {
 //
 //    private static int antalSpillere=0; //klasse-attribut, som holder styr pÂ antal objekter der er oprettet
 //
-//    private Konto kto;   /* klassen Konto forudsÊttes importeret */
+//    private Konto kto;   /* klassen Konto forudsættes importeret */
 //
 //    private int ID_nr;
 //
@@ -47,7 +47,7 @@ public class Spiller {
 //
 //    public Spiller() {
 //    	
-//    			//konstrukt¯rern skal optÊlle - klassevariablen (-attributten)
+//    			//konstrukt¯rern skal optælle - klassevariablen (-attributten)
 //                antalSpillere++; 
 //                
 //                // her tildeles spilleren et nummer - som klassearttrib. er nÂet til

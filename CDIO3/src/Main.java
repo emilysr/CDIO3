@@ -32,7 +32,7 @@ public static boolean konto3000=false;
 	while (konto3000==false) { 
 		
 		/*
-		 * for l¯kke over antal brugere, der skal vÊre med i spillet.
+		 * for l¯kke over antal brugere, der skal være med i spillet.
 		 */
 		for (int j = 0; j < bruger; j++) {
 			int sum = 0;
@@ -61,12 +61,12 @@ public static boolean konto3000=false;
 				System.out.println("Du er landet pÂ felt " + sum);
 				System.out.println(  Felter.felttekst(sum));
 				System.out.println( spil.hentNavn(j) + " landte pÂ " + Felter.feltNavn(sum) + 		
-						" & din penge beholdning Êndres med " + Felter.feltVÊrdi(sum)) ; 
+						" & din penge beholdning ændres med " + Felter.feltVærdi(sum)) ; 
 				
 				/*
 				 * Retter spillerens konto, sÂ den passer med den nye pengebeholdning
 				 */
-				Konto.setPengebeholdning(Felter.feltVÊrdi(sum), j);
+				Konto.setPengebeholdning(Felter.feltVærdi(sum), j);
 				System.out.println(spil.hentNavn(j) + "'s pengebeholdning er nu " + Konto.Pengebeholdning.get(j));
 				System.out.println("");
 				
