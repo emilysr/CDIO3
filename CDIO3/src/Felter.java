@@ -109,7 +109,7 @@ public class Felter {
 		}
 			
 		/*
-		 * Laver en metode til at brugen, kan spille spillet i et passende tempo.
+		 * Laver en metode til at brugeren, kan spille spillet i et passende tempo.
 		 * Kan tage alle testede inputs, dog optæller den inputs
 		 */ 
 		public static void trykEnter () {

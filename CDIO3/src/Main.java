@@ -9,10 +9,9 @@ public static boolean konto3000=false;
 		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in); 
 		Spiller spil = new Spiller();
+		Konto konto = new Konto();
 		
 		/* Initiallisere vores variabler */
-		int kast1 = 0;
-		int kast2 = 0;
 		int bruger = 2; 
 
 		/* Lavet med henblik pÂ udvidelser af yderligere bruger.	
@@ -21,7 +20,7 @@ public static boolean konto3000=false;
 		 */
 
 		/* Spillet starter */
-		spil.spiller(bruger);
+		spil.spiller(bruger, konto);
 
 		System.out.println("\nLad spillet begynde. \n \n" + spil.hentNavn(0) + " starter");
 	
@@ -32,7 +31,7 @@ public static boolean konto3000=false;
 	while (konto3000==false) { 
 		
 		/*
-		 * for l¯kke over antal brugere, der skal være med i spillet.
+		 * for løkke over antal brugere, der skal være med i spillet.
 		 */
 		for (int j = 0; j < bruger; j++) {
 			int sum = 0;
@@ -50,10 +49,7 @@ public static boolean konto3000=false;
 			 */
 			for (int n = 0; n < 1; n++) {
 				dice.roll();
-				kast1 = dice.getFaceValue();
-				dice.roll();
-				kast2 = dice.getFaceValue();
-				sum=kast1+kast2;
+				sum = dice.getFaceValue();
 				
 				/*
 				 * Udskrift til spilleren om felt, penge beholdning osv. 
@@ -66,8 +62,8 @@ public static boolean konto3000=false;
 				/*
 				 * Retter spillerens konto, sÂ den passer med den nye pengebeholdning
 				 */
-				Konto.setPengebeholdning(Felter.feltVærdi(sum), j);
-				System.out.println(spil.hentNavn(j) + "'s pengebeholdning er nu " + Konto.Pengebeholdning.get(j));
+				konto.setPengebeholdning(Felter.feltVærdi(sum), j);
+				System.out.println(spil.hentNavn(j) + "'s pengebeholdning er nu " + konto.Pengebeholdning.get(j));
 				System.out.println("");
 				
 				/* Ekstra tur ved vareulvemur */

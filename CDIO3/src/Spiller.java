@@ -11,7 +11,7 @@ public class Spiller {
 		private Scanner scan = new Scanner(System.in);
 		private ArrayList <String> spillerNavn = new ArrayList <String> ();
 		
-	public void spiller (int bruger) {
+	public void spiller (int bruger, Konto konto) {
 		
 		/* 
 		 * for l¯kke for at oprette spillere, med navn og pengebeholdning
@@ -19,9 +19,9 @@ public class Spiller {
 		for(int i = 0; i < bruger; i++) {
 			System.out.println("Hvad hedder spiller " + (i+1) + "?");
 			spillerNavn.add(scan.next());
-			Konto.nyKonto();
+			konto.nyKonto();
 			System.out.println("Spiller " + spillerNavn.get(i) + " er oprettet.");
-			System.out.println("Konto i har en penge beholdning pÂ " + Konto.Pengebeholdning.get(i));
+			System.out.println("Konto i har en penge beholdning pÂ " + konto.Pengebeholdning.get(i));
 		}
 	}
 	
