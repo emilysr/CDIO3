@@ -10,6 +10,7 @@ public class Spiller {
 		 */
 		private Scanner scan = new Scanner(System.in);
 		private ArrayList <String> spillerNavn = new ArrayList <String> ();
+		private static ArrayList <Integer> spillerID = new ArrayList <Integer> ();
 		
 	public void spiller (int bruger, Konto konto) {
 		
@@ -28,8 +29,12 @@ public class Spiller {
 	/* Henter spillerens navn */
 	public String hentNavn (int i) {
 		return spillerNavn.get(i);
-	}		
+	}
 	
+	/* Henter spillerens ID */
+	public static int hentID (int j) {
+		return spillerID.get(j);
+	}	
 }
 
 
