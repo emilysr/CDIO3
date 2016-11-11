@@ -54,22 +54,21 @@ public static boolean konto3000=false;
 				/*
 				 * Udskrift til spilleren om felt, penge beholdning osv. 
 				 */
-				System.out.println("Du er landet pÂ felt " + sum);
-				System.out.println(  Felter.felttekst(sum));
-				System.out.println( spil.hentNavn(j) + " landte pÂ " + Felter.feltNavn(sum) + 		
-						" & din penge beholdning ændres med " + Felter.feltVærdi(sum)) ; 
+				System.out.println("Du er landet på felt " + sum);
+				
+				if (Ejerskab.ejet(sum) == true)
+					Ejerskab.købFelt(sum, j);
+				
+				System.out.println( spil.hentNavn(j) + " landte på " + Felter.feltNavn(sum) + 		
+						" & din penge beholdning ændres med " + Felter.feltVærdi(sum, spil.hentID(j))) ; 
 				
 				/*
 				 * Retter spillerens konto, sÂ den passer med den nye pengebeholdning
 				 */
-				konto.setPengebeholdning(Felter.feltVærdi(sum), j);
+				Konto.setPengebeholdning(Felter.feltVærdi(sum, spil.hentID(j)), j);
 				System.out.println(spil.hentNavn(j) + "'s pengebeholdning er nu " + konto.Pengebeholdning.get(j));
 				System.out.println("");
-				
-				/* Ekstra tur ved vareulvemur */
-				if (sum == 10){
-					n = -1;
-				} 	
+				 	
 			}
 			/* Annoncere vinderen */
 			if (konto3000 == true){
