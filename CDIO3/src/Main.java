@@ -11,12 +11,12 @@ public static boolean konto3000=false;
 		Konto konto = new Konto();
 		
 		/* Initiallisere vores variabler */
-		int bruger = 2; 
 
-		/* Lavet med henblik pÂ udvidelser af yderligere bruger.	
-		 *System.out.println("Velkommen \nHvor mange spillere er i?");
-		 *int bruger = scan.nextInt(); 
-		 */
+
+		// Lavet med henblik pÂ udvidelser af yderligere bruger.	
+		 System.out.println("Velkommen \nHvor mange spillere er i?");
+		 int bruger = scan.nextInt(); 
+		 
 
 		/* Spillet starter */
 		spil.spiller(bruger, konto);
