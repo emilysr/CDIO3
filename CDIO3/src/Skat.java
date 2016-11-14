@@ -11,13 +11,13 @@ public class Skat extends Felter{
 		int valg = scan.nextInt(); int betalt = 0;
 		if (valg == 1) {
 			System.out.println("Du har betalt 4000,- i skat.");
-			Konto.setPengebeholdning(-4000, j);	
+			konto.setPengebeholdning(-4000, j);	
 			betalt = -4000;
 		}
 		if (valg == 2) {
 			System.out.println("Du har betalt " + procentSats + " af din formue. ");
-			Konto.setPengebeholdning(Konto.Pengebeholdning.get(j)-((Konto.Pengebeholdning.get(j)/100)*procentSats), j);
-			betalt = (Konto.Pengebeholdning.get(j)/100) * procentSats ;
+			Konto.setPengebeholdning(konto.Pengebeholdning.get(j)-((konto.Pengebeholdning.get(j)/100)*procentSats), j);
+			betalt = (konto.Pengebeholdning.get(j)/100) * procentSats ;
 		}
 		return betalt;
 	}

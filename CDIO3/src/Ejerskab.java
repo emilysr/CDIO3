@@ -19,7 +19,7 @@ public class Ejerskab extends Felter {
 			System.out.println("Vil du gerne købe dette felt? (j/n)");
 			String svar = scan.next();
 			if (svar.equalsIgnoreCase("j"));
-			Konto.setPengebeholdning(Felter.feltpris(sum), j);
+			konto.setPengebeholdning(Felter.feltpris(sum), j);
 			setEjerskab(sum, j);
 		}		
 	}

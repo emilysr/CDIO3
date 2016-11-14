@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Main {
@@ -52,23 +51,26 @@ public static boolean konto3000=false;
 				sum = dice.getFaceValue();
 				
 				/*
-				 * Udskrift til spilleren om felt, penge beholdning osv. 
+				 * Udskrift til spilleren om felt, pengebeholdning osv. 
 				 */
-				System.out.println("Du er landet på felt " + sum);
+				System.out.println("Du er landet pÂ felt " + sum);
 				
 				if (Ejerskab.ejet(sum) == true)
 					Ejerskab.købFelt(sum, j);
 				
 				System.out.println( spil.hentNavn(j) + " landte på " + Felter.feltNavn(sum) + 		
-						" & din penge beholdning ændres med " + Felter.feltVærdi(sum, spil.hentID(j))) ; 
+						" & din penge beholdning ændres med " + Felter.feltVærdi(sum, spil.hentID(j))) ;
+				
 				
 				/*
 				 * Retter spillerens konto, sÂ den passer med den nye pengebeholdning
 				 */
-				Konto.setPengebeholdning(Felter.feltVærdi(sum, spil.hentID(j)), j);
+				konto.setPengebeholdning(Felter.feltVærdi(sum, spil.hentID(j)), j);
 				System.out.println(spil.hentNavn(j) + "'s pengebeholdning er nu " + konto.Pengebeholdning.get(j));
 				System.out.println("");
-				 	
+				
+			
+				} 	
 			}
 			/* Annoncere vinderen */
 			if (konto3000 == true){
