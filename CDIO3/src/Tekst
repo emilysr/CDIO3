@@ -1,0 +1,84 @@
+import java.util.ArrayList;
+
+public class Tekst {
+
+	static Spiller spil = new Spiller();
+	
+	public void intro () {
+		System.out.println("Velkommen! \nHvor mange spillere er i? ");
+	}
+	
+	public void spilStart () {
+		System.out.println("\nLad spillet begynde. \n \n" + spil.hentNavn(0) + " starter");
+	}
+	
+	public void landerPaa () {
+		System.out.print("Du er landet på felt ");
+	}
+	
+	public static void feltBesked (int sum, int j) {
+		System.out.println(Spiller.hentNavn(j) + " landte på " + feltNavn(sum) + 		
+				" & din penge beholdning ændres med " + Felter.feltVærdi(sum, Spiller.hentID(j)));
+	}
+
+	public static void slutBesked (int j) {
+		System.out.println(Spiller.hentNavn(j) + "'s pengebeholdning er nu " + Konto.Pengebeholdning.get(j));
+		System.out.println("");
+	}
+	
+	public static void vinder (int j) {
+		System.out.println("Tillykke du har vundet " + Spiller.hentNavn(j) + "!");
+	}
+	
+	public static void opretSpillerDel1 (int i) {
+		System.out.println("Hvad hedder spiller " + (i+1) + "?");
+	}
+	
+	public static void opretSpillerDel2 (int i) {
+		System.out.println("Spiller " + Spiller.spillerNavn.get(i) + " er oprettet.");
+		System.out.println("Konto i har en penge beholdning pÂ " + Konto.Pengebeholdning.get(i));
+	}
+	
+	public void koebfelt () {
+		System.out.println("Vil du gerne købe dette felt? (j/n)");
+	}
+	
+	public static void enter () {
+		System.out.println("Tryk 'enter' for at forsætte.");
+	}
+	
+	public static String feltNavn (int sum) {
+		/*
+		 * ArrayList over felternes navn, lavet som udefinerbart langt array
+		 * Felt [0] & [1] er tomme da vi kun kan slå værdierne 2-12
+		 */
+		ArrayList <String> feltNavn = new ArrayList <String> ();
+			feltNavn.add("START");
+			feltNavn.add("Tribe Encampment");
+			feltNavn.add("Crater");
+			feltNavn.add("Mountain");
+			feltNavn.add("Cold Desert");
+			feltNavn.add("Black cave");
+			feltNavn.add("The Werewall");
+			feltNavn.add("Mountain village");
+			feltNavn.add("South Citadel");
+			feltNavn.add("Palace gates");
+			feltNavn.add("Tower");
+			feltNavn.add("Castle");
+			feltNavn.add("Walled city");
+			feltNavn.add("Monastery");
+ 			feltNavn.add("Huts in the mountain");
+			feltNavn.add("The pit");
+			feltNavn.add("Goldmine");
+			feltNavn.add("Caravan");
+			feltNavn.add("Second Sail");
+			feltNavn.add("Sea Grover");
+			feltNavn.add("The Buccaneers");
+			feltNavn.add("Privateer armade");
+			
+			String navn = feltNavn.get(sum);
+			
+			return navn;
+		}
+
+}
