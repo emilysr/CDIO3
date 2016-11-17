@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 
 public class Felter {
@@ -11,14 +10,14 @@ public class Felter {
 	}
 	
 	/* Tjekker om feltet kan ejes */
-	public static boolean ownable (int sum) {
-		if (feltType.get(sum) == 1 || feltType.get(sum) == 3 || feltType.get(sum) == 5)
-			return true;
-		else 
-			return false; 
-	}
+//	public static boolean ownable (int sum) {
+	//	if (feltType.get(sum) == 1 || feltType.get(sum) == 3 || feltType.get(sum) == 5)
+		//	return true;
+		//else 
+			//return false; 
+//	}
 	
-	public static String feltNavn (int sum) 
+	public static String feltNavn (int sum) {
 		/*
 		 * ArrayList over felternes navn, lavet som udefinerbart langt array
 		 * Felt [0] & [1] er tomme da vi kun kan slå værdierne 2-12

@@ -9,10 +9,10 @@ public class Spiller {
 		 * ArrayList med spiller navne, udefinerbart langt
 		 */
 		private Scanner scan = new Scanner(System.in);
-		private ArrayList <String> spillerNavn = new ArrayList <String> ();
+		private static ArrayList <String> spillerNavn = new ArrayList <String> ();
 		private static ArrayList <Integer> spillerID = new ArrayList <Integer> ();
 		
-	public void spiller (int bruger, Konto konto) {
+	public void spiller (int bruger) {
 		
 		/* 
 		 * for l¯kke for at oprette spillere, med navn og pengebeholdning
@@ -20,14 +20,14 @@ public class Spiller {
 		for(int i = 0; i < bruger; i++) {
 			System.out.println("Hvad hedder spiller " + (i+1) + "?");
 			spillerNavn.add(scan.next());
-			konto.nyKonto();
+			Konto.nyKonto();
 			System.out.println("Spiller " + spillerNavn.get(i) + " er oprettet.");
-			System.out.println("Konto i har en penge beholdning pÂ " + konto.Pengebeholdning.get(i));
+			System.out.println("Konto i har en penge beholdning pÂ " + Konto.Pengebeholdning.get(i));
 		}
 	}
 	
 	/* Henter spillerens navn */
-	public String hentNavn (int i) {
+	public static String hentNavn (int i) {
 		return spillerNavn.get(i);
 	}
 	

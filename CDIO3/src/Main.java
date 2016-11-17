@@ -8,7 +8,7 @@ public static boolean konto3000=false;
 		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in); 
 		Spiller spil = new Spiller();
-		Konto konto = new Konto();
+	
 		
 		/* Initiallisere vores variabler */
 
@@ -19,9 +19,9 @@ public static boolean konto3000=false;
 		 
 
 		/* Spillet starter */
-		spil.spiller(bruger, konto);
+		spil.spiller(bruger);
 
-		System.out.println("\nLad spillet begynde. \n \n" + spil.hentNavn(0) + " starter");
+		System.out.println("\nLad spillet begynde. \n \n" + Spiller.hentNavn(0) + " starter");
 	
 	
 	/* 
@@ -55,32 +55,32 @@ public static boolean konto3000=false;
 				 */
 				System.out.println("Du er landet pÂ felt " + sum);
 				
-				if (Ejerskab.ejet(sum) == true)
-					Ejerskab.købFelt(sum, j);
+		//		if (Ejerskab.ejet(sum) == true)
+			//		Ejerskab.købFelt(sum, j);
 				
-				System.out.println( spil.hentNavn(j) + " landte på " + Felter.feltNavn(sum) + 		
-						" & din penge beholdning ændres med " + Felter.feltVærdi(sum, spil.hentID(j))) ;
+				System.out.println( j + " landte på " + Felter.feltNavn(sum) + 
+						" & din penge beholdning ændres med " + Felter.feltVærdi(sum, j)) ;
 				
 				
 				/*
 				 * Retter spillerens konto, sÂ den passer med den nye pengebeholdning
 				 */
-				konto.setPengebeholdning(Felter.feltVærdi(sum, spil.hentID(j)), j);
-				System.out.println(spil.hentNavn(j) + "'s pengebeholdning er nu " + konto.Pengebeholdning.get(j));
+				Konto.setPengebeholdning(Felter.feltVærdi(sum, Spiller.hentID(j)), j);
+				System.out.println(Spiller.hentNavn(j) + "'s pengebeholdning er nu " + Konto.Pengebeholdning.get(j));
 				System.out.println("");
 				
 			
 				} 	
-			}
+			
 			/* Annoncere vinderen */
 			if (konto3000 == true){
-				System.out.println("Tillykke du har vundet " + spil.hentNavn(j) + "!");
+				System.out.println("Tillykke du har vundet " + Spiller.hentNavn(j) + "!");
 			return;
 			}
 		}
-	
-		
 	}
+		
+	
 		scan.close();
 	}
 }

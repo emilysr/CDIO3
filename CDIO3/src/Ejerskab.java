@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -6,12 +7,12 @@ public class Ejerskab extends Felter {
 	public static ArrayList <Integer> ejerskab = new ArrayList <Integer> ();
 	static Scanner scan = new Scanner(System.in);
 		
-	public static boolean ejet (int sum) {
-		if (Felter.ownable(sum) == true && ejerskab.get(sum) != 0)
-			return true;
-		else
-			return false;
-	}
+//	public static boolean ejet (int sum) {
+//		if (Felter.ownable(sum) == true && ejerskab.get(sum) != 0)
+	//		return true;
+		//else
+			//return false;
+	//}
 	
 	public static void købFelt (int sum, int j) {
 		if ( ejerskab.get(sum) == 0 && feltType.get(sum) == 1 || ejerskab.get(sum) == 0 && feltType.get(sum) == 3 ||
@@ -19,7 +20,7 @@ public class Ejerskab extends Felter {
 			System.out.println("Vil du gerne købe dette felt? (j/n)");
 			String svar = scan.next();
 			if (svar.equalsIgnoreCase("j"));
-			konto.setPengebeholdning(Felter.feltpris(sum), j);
+			Konto.setPengebeholdning(Felter.feltpris(sum), j);
 			setEjerskab(sum, j);
 		}		
 	}
